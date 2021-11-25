@@ -2,13 +2,13 @@
     <tr>
       
       <th (click)="sort('bday.name')">name&nbsp; <i class ="fa fa-sort"></i></th>
-      <th (click)="sort('bday.age')">age&nbsp; <i class ="fa fa-sort"></i></th>
+      <th (click)="sort('bday.age')">dob&nbsp; <i class ="fa fa-sort"></i></th>
       
     </tr>
     <tr *ngFor = "let name of bday | orderBy : key:reverse">
    
       <td>{{name.name}}</td>
-      <td>{{name.age}}</td>
+      <td>{{name.dob}}</td>
     </tr>
     
   </table>
