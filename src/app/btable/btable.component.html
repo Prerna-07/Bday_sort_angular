@@ -1,0 +1,23 @@
+<table>
+    <tr>
+      
+      <th (click)="sort('bday.name')">name&nbsp; <i class ="fa fa-sort"></i></th>
+      <th (click)="sort('bday.age')">age&nbsp; <i class ="fa fa-sort"></i></th>
+      
+    </tr>
+    <tr *ngFor = "let name of bday | orderBy : key:reverse">
+   
+      <td>{{name.name}}</td>
+      <td>{{name.age}}</td>
+    </tr>
+    
+  </table>
+  <div>
+    <p >Unsort : <input type="radio" name="radiogroup" (change)="sort('bday.id')" ng-click> </p>
+    <p> Sort by age : <input type="radio" name="radiogroup" (change)="sort('bday.age')" ng-click></p>
+    <p> Sort by name : <input type="radio" name="radiogroup" (change)="sort('bday.name')" ng-click> </p>
+  </div>
+
+
+
+  
